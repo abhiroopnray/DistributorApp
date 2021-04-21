@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="item_array">
+        <item>Kancha Aam</item>
+        <item>Mango</item>
+        <item>Imli</item>
+        <item>Pineapple Mirchi</item>
+    </array>
+</resources>
