@@ -9,7 +9,6 @@
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_above="@+id/btn_add_items"
         android:fillViewport="false"
         app:layout_constraintBottom_toTopOf="@+id/bottom_layout"
         app:layout_constraintEnd_toStartOf="@+id/bottom_layout"

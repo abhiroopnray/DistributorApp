@@ -13,6 +13,6 @@ public class AppViewModel extends AndroidViewModel {
 
     public AppViewModel(@NonNull Application application) {
         super(application);
-        mLocalRepository = new LocalRepository();
+//        mLocalRepository = new LocalRepository();
     }
 }

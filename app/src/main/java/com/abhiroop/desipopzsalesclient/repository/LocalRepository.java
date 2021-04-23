@@ -8,11 +8,11 @@ import androidx.room.RoomDatabase;
 
 import com.abhiroop.desipopzsalesclient.common.Constants;
 import com.abhiroop.desipopzsalesclient.database.AppRoomDao;
-import com.abhiroop.desipopzsalesclient.database.RoomInfoEntity;
+import com.abhiroop.desipopzsalesclient.database.AppInfoEntity;
 
 
-@Database(entities = {RoomInfoEntity.class}, version = 1)
-public abstract  class LocalRepository extends RoomDatabase {
+@Database(entities = {AppInfoEntity.class}, version = 1)
+public abstract  class  LocalRepository extends RoomDatabase {
 
     private static LocalRepository sInstance;
 

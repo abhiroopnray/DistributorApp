@@ -3,6 +3,7 @@ package com.abhiroop.desipopzsalesclient;
 import android.app.Application;
 import android.content.Context;
 
+import com.abhiroop.desipopzsalesclient.repository.DataRepository;
 import com.abhiroop.desipopzsalesclient.repository.LocalRepository;
 
 public class AppBaseApp  extends Application {
@@ -27,9 +28,14 @@ public class AppBaseApp  extends Application {
         super.onCreate();
         appContext = getApplicationContext();
         getLocalRepository();
+        getRepository();
     }
 
     private LocalRepository getLocalRepository() {
         return LocalRepository.getInstance(this);
+    }
+
+    public DataRepository getRepository() {
+        return DataRepository.getInstance(this, getLocalRepository()/*, getRemoteRepository()*/);
     }
 }

@@ -1,5 +1,7 @@
 package com.abhiroop.desipopzsalesclient.database;
 
+import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import androidx.room.TypeConverters;
@@ -11,15 +13,20 @@ import com.abhiroop.desipopzsalesclient.common.Constants;
  * {
  * }
  */
-@Entity(tableName = Constants.TABLE_NAME)
+@Entity(tableName = Constants.TABLE_NAME, primaryKeys = {"shopname", "id"})
 @TypeConverters({Converters.class})
-public class RoomInfoEntity {
-    @PrimaryKey(autoGenerate = false)
-    private int id;
-    private String shopName;
+public class AppInfoEntity {
+    @ColumnInfo(name = "id")
+    @NonNull private int id;
+    @ColumnInfo(name ="shopname")
+    @NonNull private String shopName;
+    @ColumnInfo(name = "shoplocation")
     private String shopLocation;
+    @ColumnInfo(name = "itemtype")
     private String itemType;
+    @ColumnInfo(name = "itemquantity")
     private int itemQuantity;
+    @ColumnInfo(name = "price")
     private int price;
 
     public int getId() {

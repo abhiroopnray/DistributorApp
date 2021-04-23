@@ -1,9 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <array name="item_array">
+    <string-array name="brands">
+        <item>Select Brand</item>
+        <item>Milk Mantra</item>
+        <item>Shelly</item>
+        <item>Desi Popz</item>
+        <item>Tata Water</item>
+        <item>Add Item</item>
+    </string-array>
+
+    <string-array name="item_desi_popz_array">
         <item>Kancha Aam</item>
         <item>Mango</item>
         <item>Imli</item>
         <item>Pineapple Mirchi</item>
-    </array>
+    </string-array>
+
+    <string-array name="item_milk_mantra_array">
+        <item>Milk</item>
+        <item>Pro biotic Curd</item>
+        <item>Mishti Doi</item>
+        <item>Paneer</item>
+    </string-array>
+    <string-array name="product_shelly">
+        <item>Spices</item>
+        <item>Ghee</item>
+        <item>Aachar</item>
+    </string-array>
+
+    <string-array name="item_shelly_aachar">
+        <item>kool</item>
+        <item>Mango</item>
+        <item>Jolpai</item>
+    </string-array>
 </resources>
