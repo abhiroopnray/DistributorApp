@@ -13,7 +13,7 @@ import com.abhiroop.desipopzsalesclient.common.Constants;
  */
 @Entity(tableName = Constants.TABLE_NAME)
 @TypeConverters({Converters.class})
-public class RoomInfoEntity {
+public class AppInfoEntity {
     @PrimaryKey(autoGenerate = false)
     private int id;
     private String shopName;

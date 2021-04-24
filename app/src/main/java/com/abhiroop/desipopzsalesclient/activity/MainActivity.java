@@ -20,6 +20,7 @@ import android.widget.TextView;
 
 import com.abhiroop.desipopzsalesclient.R;
 import com.abhiroop.desipopzsalesclient.database.AppInfoEntity;
+import com.abhiroop.desipopzsalesclient.database.DistributorInfoEntity;
 import com.abhiroop.desipopzsalesclient.repository.LocalRepository;
 
 import java.util.ArrayList;
@@ -159,7 +160,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         private void insertToDB () {
             String name_of_shop = shopName.getText().toString().trim();
             String location = shopLocation.getText().toString().trim();
-            AppInfoEntity appInfoEntity = LocalRepository.getInstance(this).appRoomDao().getEntity();
+            DistributorInfoEntity appInfoEntity = LocalRepository.getInstance(this).appRoomDao().getEntity();
             appInfoEntity.setShopName(name_of_shop);
             appInfoEntity.setShopLocation(location);
             LocalRepository.getInstance(this).appRoomDao().update(appInfoEntity);

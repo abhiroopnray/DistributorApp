@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "a09299f901416557ed13933a33ec35da",
+    "identityHash": "4ffd6fdc3ef217552396fc25e6102e6b",
     "entities": [
       {
         "tableName": "db_info",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `shopname` TEXT NOT NULL, `shoplocation` TEXT, `itemtype` TEXT, `itemquantity` INTEGER NOT NULL, `price` INTEGER NOT NULL, PRIMARY KEY(`shopname`, `id`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `shopName` TEXT, `shopLocation` TEXT, `itemType` TEXT, `itemQuantity` INTEGER NOT NULL, `price` INTEGER NOT NULL, PRIMARY KEY(`id`))",
         "fields": [
           {
             "fieldPath": "id",
@@ -16,25 +16,25 @@
           },
           {
             "fieldPath": "shopName",
-            "columnName": "shopname",
+            "columnName": "shopName",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "shopLocation",
-            "columnName": "shoplocation",
+            "columnName": "shopLocation",
             "affinity": "TEXT",
             "notNull": false
           },
           {
             "fieldPath": "itemType",
-            "columnName": "itemtype",
+            "columnName": "itemType",
             "affinity": "TEXT",
             "notNull": false
           },
           {
             "fieldPath": "itemQuantity",
-            "columnName": "itemquantity",
+            "columnName": "itemQuantity",
             "affinity": "INTEGER",
             "notNull": true
           },
@@ -47,7 +47,6 @@
         ],
         "primaryKey": {
           "columnNames": [
-            "shopname",
             "id"
           ],
           "autoGenerate": false
@@ -59,7 +58,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'a09299f901416557ed13933a33ec35da')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '4ffd6fdc3ef217552396fc25e6102e6b')"
     ]
   }
 }

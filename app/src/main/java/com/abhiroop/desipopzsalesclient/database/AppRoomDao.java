@@ -28,11 +28,11 @@ public interface AppRoomDao {
     /**
      * Inserts a warrantyDao into the table.
      *
-     * @param roomInfoEntity A new sosDao.
+     * @param distributorInfoEntity A new sosDao.
      * @return The row ID of the newly inserted sosDao.
      */
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    long insert(RoomInfoEntity roomInfoEntity);
+    long insert(DistributorInfoEntity distributorInfoEntity);
 
 
     /**
@@ -49,10 +49,10 @@ public interface AppRoomDao {
      * @return the user
      */
     @Query("SELECT * FROM " + Constants.TABLE_NAME)
-    RoomInfoEntity getSOSUser();
+    DistributorInfoEntity getEntity();
 
     @Query("SELECT * FROM " + Constants.TABLE_NAME)
-    LiveData<RoomInfoEntity> getLiveSOSUser();
+    LiveData<DistributorInfoEntity> getLiveSOSUser();
 
     /**
      * Delete all.
@@ -61,5 +61,5 @@ public interface AppRoomDao {
     void deleteAll();
 
     @Update
-    int update(RoomInfoEntity... sosInfoEntities);
+    int update(DistributorInfoEntity... sosInfoEntities);
 }
